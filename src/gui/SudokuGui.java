@@ -139,8 +139,11 @@ public class SudokuGui extends JFrame {
         @Override
         public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr)
                 throws BadLocationException {
-            if (string == null)
+            // Allow clearing or empty strings
+            if (string == null || string.isEmpty()) {
+                super.insertString(fb, offset, string, attr);
                 return;
+            }
             if (isValid(fb.getDocument().getLength(), string)) {
                 super.insertString(fb, offset, string, attr);
             }
@@ -149,8 +152,11 @@ public class SudokuGui extends JFrame {
         @Override
         public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs)
                 throws BadLocationException {
-            if (text == null)
+            // Allow clearing or empty strings
+            if (text == null || text.isEmpty()) {
+                super.replace(fb, offset, length, text, attrs);
                 return;
+            }
             if (isValid(fb.getDocument().getLength() - length, text)) {
                 super.replace(fb, offset, length, text, attrs);
             }
