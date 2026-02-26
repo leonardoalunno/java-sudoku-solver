@@ -9,6 +9,8 @@ This project highlights core Computer Science and Software Engineering principle
 2. **Object-Oriented Design (OOP):** Clear separation of concerns between the core logic engine (`SudokuSolver.java`) and the visual presentation layer (`SudokuGui.java`).
 3. **Event-Driven Programming:** Handling user interactions and state changes via ActionListeners in Java Swing.
 
+![Sudoku Solver GUI](docs/screenshot.png)
+
 ## 🚀 Engineering Highlights
 
 *   **Optimized Backtracking:** The solver (`src/core/SudokuSolver.java`) intelligently checks constraints (row, column, and 3x3 sub-grid) before placing a number, significantly reducing the algorithmic search space.
