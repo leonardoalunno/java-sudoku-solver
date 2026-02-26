@@ -9,9 +9,11 @@ This project highlights core Computer Science and Software Engineering principle
 2. **Object-Oriented Design (OOP):** Clear separation of concerns between the core logic engine (`SudokuSolver.java`) and the visual presentation layer (`SudokuGui.java`).
 3. **Event-Driven Programming:** Handling user interactions and state changes via ActionListeners in Java Swing.
 
-![Sudoku Solver GUI](docs/screenshot.png)
+<div align="center">
+  <img src="docs/screenshot.png" alt="Sudoku Solver GUI" width="350"/>
+</div>
 
-## 🚀 Engineering Highlights
+## ⚙️ Engineering Highlights
 
 *   **Optimized Backtracking:** The solver (`src/core/SudokuSolver.java`) intelligently checks constraints (row, column, and 3x3 sub-grid) before placing a number, significantly reducing the algorithmic search space.
 *   **Input Validation:** The GUI employs a custom `DocumentFilter` (`DigitFilter`) to strictly allow only single-digit inputs (1-9) at the keystroke level, ensuring engine stability.
@@ -32,7 +34,7 @@ java-sudoku-solver/
 └── README.md                    # Project documentation
 ```
 
-## ⚙️ How to Run
+## 🚀 How to Run
 
 1. Clone the repository to your local machine:
    ```bash
@@ -48,8 +50,8 @@ java-sudoku-solver/
    ```
 4. **Usage:** Enter your known Sudoku numbers into the grid and click **Solve**. The algorithm will fill in the remaining blue numbers instantly. Click **Clear** to reset the board.
 
----
+## 👨‍💻 Author
 
-> **_Leonardo Alunno_**  
-> _Aspiring Computer Engineer_  
-> 🔗 [LinkedIn](https://www.linkedin.com/in/leonardo-alunno-3095922b7)
+**Leonardo Alunno**  
+*Aspiring Computer Engineer*  
+🔗 [LinkedIn](https://www.linkedin.com/in/leonardo-alunno-3095922b7)
