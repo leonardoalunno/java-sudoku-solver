@@ -1,5 +1,9 @@
 # 🧩 Java Sudoku Solver (Backtracking & Swing)
 
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Algorithms](https://img.shields.io/badge/Algorithm-Backtracking-blue?style=for-the-badge)
+![UI](https://img.shields.io/badge/UI-Java_Swing-lightgrey?style=for-the-badge)
+
 A sleek, Java-based Desktop application that solves any valid 9x9 Sudoku puzzle instantly using a recursive **Backtracking Algorithm**. The project features a clean Graphical User Interface (GUI) built with **Java Swing**.
 
 ## 📖 Overview
@@ -10,8 +14,21 @@ This project highlights core Computer Science and Software Engineering principle
 3. **Event-Driven Programming:** Handling user interactions and state changes via ActionListeners in Java Swing.
 
 <div align="center">
-  <img src="docs/screenshot.png" alt="Sudoku Solver GUI" width="350"/>
+  <!-- TODO: Replace with an animated GIF of the solver in action -->
+  <img src="docs/screenshot.png" alt="Sudoku Solver GUI in Action" width="450"/>
 </div>
+
+## 🧠 The Algorithm: How it Works
+
+The core of this solver is a **Recursive Backtracking Algorithm**, a classic depth-first search approach to constraint satisfaction problems. 
+
+1. **Find an empty cell:** The algorithm scans the 9x9 grid to find the first cell that doesn't contain a number (0).
+2. **Guess a number (1-9):** It attempts to place a digit from 1 to 9 in that cell.
+3. **Validate the guess:** It checks if the digit violates any Sudoku rules (is it already in the same row, column, or 3x3 subgrid?).
+4. **Recursion:** If valid, it recursively calls itself to solve the *next* empty cell.
+5. **Backtrack:** If a guess leads to a dead end (no valid numbers can be placed in subsequent cells), it "backtracks", resetting the current cell to 0 and trying the *next* possible digit.
+
+This systematic exploration guarantees a solution (if one exists) by pruning invalid paths early in the decision tree.
 
 ## ⚙️ Engineering Highlights
 
