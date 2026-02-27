@@ -12,6 +12,8 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class SudokuGui extends JFrame {
 
@@ -58,6 +60,25 @@ public class SudokuGui extends JFrame {
 
                 // Add soft generic background
                 cells[row][col].setBorder(new CompoundBorder(border, BorderFactory.createEmptyBorder(2, 2, 2, 2)));
+
+                // Add KeyListener for arrow key navigation
+                final int r = row;
+                final int c = col;
+                cells[row][col].addKeyListener(new KeyAdapter() {
+                    @Override
+                    public void keyPressed(KeyEvent e) {
+                        int keyCode = e.getKeyCode();
+                        if (keyCode == KeyEvent.VK_UP && r > 0) {
+                            cells[r - 1][c].requestFocus();
+                        } else if (keyCode == KeyEvent.VK_DOWN && r < GRID_SIZE - 1) {
+                            cells[r + 1][c].requestFocus();
+                        } else if (keyCode == KeyEvent.VK_LEFT && c > 0) {
+                            cells[r][c - 1].requestFocus();
+                        } else if (keyCode == KeyEvent.VK_RIGHT && c < GRID_SIZE - 1) {
+                            cells[r][c + 1].requestFocus();
+                        }
+                    }
+                });
 
                 gridPanel.add(cells[row][col]);
             }
