@@ -52,6 +52,14 @@ java-sudoku-solver/
 
 ## 🚀 How to Run
 
+### Quick Start (Executable)
+The easiest way to run the application is to download the pre-compiled version:
+1. Go to the **[Releases](https://github.com/leonardoalunno/java-sudoku-solver/releases/)** page on the right side of this repository.
+2. Download the `SudokuSolver.jar` file.
+3. **Windows / Linux:** Double-click the file to run it.
+4. **Mac:** Right-click the file, select **Open**, and confirm. Alternatively, run it from the terminal: `java -jar SudokuSolver.jar`.
+
+### Advanced (Compile from Source)
 1. Clone the repository to your local machine:
    ```bash
    git clone https://github.com/leonardoalunno/java-sudoku-solver.git
@@ -64,7 +72,9 @@ java-sudoku-solver/
    ```bash
    java -cp bin gui.SudokuGui
    ```
-4. **Usage:** Enter your known Sudoku numbers into the grid and click **Solve**. The algorithm will fill in the remaining blue numbers instantly. Click **Clear** to reset the board.
+
+### Usage
+Enter your known Sudoku numbers into the grid and click **Solve**. The algorithm will fill in the remaining blue numbers instantly. Click **Clear** to reset the board.
 
 ## 👨‍💻 Author
 
