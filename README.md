@@ -14,8 +14,7 @@ This project highlights core Computer Science and Software Engineering principle
 3. **Event-Driven Programming:** Handling user interactions and state changes via ActionListeners in Java Swing.
 
 <div align="center">
-  <!-- TODO: Replace with an animated GIF of the solver in action -->
-  <img src="docs/screenshot.png" alt="Sudoku Solver GUI in Action" width="450"/>
+  <img src="docs/gifs/screenshot.gif" alt="Sudoku Solver GUI in Action" width="450"/>
 </div>
 
 ## 🧠 The Algorithm: How it Works
